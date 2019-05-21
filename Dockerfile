@@ -52,3 +52,14 @@ run \
   cmake --build . --target install
 workdir /
 run rm -rf /tmp/kcov
+
+# install latest Celero benchmark framework
+workdir /tmp
+run git clone https://github.com/DigitalInBlue/Celero.git --depth=1 --branch master --single-branch
+workdir Celero/build
+run \
+  cmake -D CMAKE_BUILD_TYPE=Release .. && \
+  cmake --build . && \
+  cmake --build . --target install
+workdir /
+run rm -rf /tmp/Celero
