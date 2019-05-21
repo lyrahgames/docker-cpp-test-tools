@@ -41,6 +41,7 @@ run \
     # zlib1g-dev \
     libdw-dev \
     libiberty-dev \
+    lcov \
   && rm -rf /var/lib/apt/lists/*
 # building
 workdir /tmp
