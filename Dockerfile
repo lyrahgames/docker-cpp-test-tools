@@ -41,7 +41,7 @@ run \
     # zlib1g-dev \
     libdw-dev \
     libiberty-dev \
-    lcov \
+    # lcov \
   && rm -rf /var/lib/apt/lists/*
 # building
 workdir /tmp
@@ -53,6 +53,14 @@ run \
   cmake --build . --target install
 workdir /
 run rm -rf /tmp/kcov
+
+# install latest lcov code coverage tool
+workdir /tmp
+run git clone https://github.com/linux-test-project/lcov.git --depth=1 --branch master --single-branch
+workdir lcov
+run make install
+workdir /
+run rm -rf /tmp/lcov
 
 # install latest Celero benchmark framework
 workdir /tmp

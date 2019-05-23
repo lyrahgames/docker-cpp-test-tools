@@ -19,4 +19,5 @@
 - [doctest](https://github.com/onqtam/doctest)
 - [Trompeloeil](https://github.com/rollbear/trompeloeil)
 - [kcov](https://github.com/SimonKagstrom/kcov)
+- [lcov](https://github.com/linux-test-project/lcov)
 - [Celero](https://github.com/DigitalInBlue/Celero)
