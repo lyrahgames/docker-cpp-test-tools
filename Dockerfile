@@ -37,10 +37,12 @@ run \
   apt-get update && \
   apt-get install -y \
     binutils-dev \
-    # libcurl4-openssl-dev \
-    # zlib1g-dev \
+    libcurl4-openssl-dev \
+    zlib1g-dev \
     libdw-dev \
     libiberty-dev \
+    libperlio-gzip-perl \
+    libjson-perl \
     # lcov \
   && rm -rf /var/lib/apt/lists/*
 # building
